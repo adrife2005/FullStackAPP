@@ -3,7 +3,7 @@ const axios = require("axios");
 exports.homeRoute = (req, res) => {
   // Make a get request to /api/goal
   axios
-    .get("http://localhost:3000/api/goals")
+    .get("https://to-do-app-qa3t.onrender.com/api/goals")
     .then((response) => {
       res.render("index", { goals: response.data });
     })
@@ -27,7 +27,9 @@ exports.logout = (req, res) => {
 exports.update_todo = (req, res) => {
   // Make a get request to /api/goal
   axios
-    .get("http://localhost:3000/api/goals", { params: { id: req.query.id } })
+    .get("https://to-do-app-qa3t.onrender.com/api/goals", {
+      params: { id: req.query.id },
+    })
     .then((goaldata) => {
       res.render("updateGoal", { id: goaldata.data });
     })
