@@ -1,0 +1,24 @@
+    <!-- Form addGoal -->
+    <main>
+        <section class="section-form">
+                <div class="container">
+                    <h2>New Goal</h2>
+                    <p class="p-add-todo text-center">Use the below form to create a new goal</p>
+                    <form action="/api/goals" method="post" id="addGoal">
+                            <div class="contact-item-form mb-2">
+                               <input class="item" type="text" id="name" name="goal" placeholder="Write yout Goal" autocomplete="off" required>
+                           </div>
+                       <div class="flex-textarea">
+                           <div class="contact-item-form-textarea textarea-field mb-2">
+                               <textarea class="item"  name="msg" id="msg" cols="30"  rows="6" placeholder="Message" autocomplete="off" required></textarea>
+                           </div>
+                       </div>
+                       <div class="flex-button">
+                           <button type="submit" id="submit">Add Goal</button>
+                           <a href="/">Back to home</a>
+                       </div>
+                    </form>
+                </div>
+        </section>
+    </main>
+    <!-- /Form addGoal -->

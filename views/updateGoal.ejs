@@ -1,0 +1,37 @@
+<!-- Include header -->
+<%- include('include/_header') %>
+<!-- /Include header -->
+
+    <!-- Form addGoal -->
+    <main>
+        <section class="section-form">
+                <div class="container">
+                    <h2>UPDATE GOAL</h2>
+                    <p class="p-add-todo text-center">Use the below form to update your goal</p>
+                    <form id="updGoal">
+                            <div class="contact-item-form mb-2">
+                               <input type="hidden" name="id" value="<%= id._id %>">
+                               <input class="item" type="text" id="name" name="goal" value="<%= id.goal %>" placeholder="Write yout Goal" autocomplete="off" required>
+                           </div>
+                       <div class="flex-textarea">
+                           <div class="contact-item-form-textarea textarea-field mb-2">
+                               <textarea class="item"  name="msg" id="msg" cols="30"  rows="6" placeholder="Message" autocomplete="off" required><%= id.msg %></textarea>
+                           </div>
+                       </div>
+                       <div class="flex-button">
+                           <button type="submit" id="submit">Update Goal</button>
+                           <a href="/">Back to home</a>
+                       </div>
+                    </form>
+                </div>
+        </section>
+    </main>
+    <!-- /Form addGoal -->
+
+<!-- Include footer -->
+<script src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
+<!-- /Include footer -->
