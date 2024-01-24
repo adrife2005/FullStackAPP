@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const id = $(this).attr("data-id");
 
       const request = {
-        url: `http://localhost:3000/api/goals/${id}`,
+        url: `https://to-do-app-qa3t.onrender.com/api/goals/${id}`,
         method: "DELETE",
       };
 
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   // EventListeners
   hamburger_buttom.addEventListener("click", sidebarMovile);
-  // formUpdt.addEventListener("submit", updtGoal);
+  formUpdt.addEventListener("submit", updtGoal);
   document.addEventListener("scroll", scrollEvent);
 });
 
