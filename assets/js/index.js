@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const request = {
-      url: `http://localhost:3000/api/goals/${data.id}`,
+      url: `https://to-do-app-qa3t.onrender.com/api/goals/${data.id}`,
       method: "PUT",
       data: data,
     };
