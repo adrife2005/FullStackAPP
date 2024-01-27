@@ -11,9 +11,9 @@ const body = document.querySelector("body");
 document.addEventListener("DOMContentLoaded", () => {
   function sidebarMovile() {
     mobile_menu.classList.toggle("active");
-    lineFirstOne.classList.toggle("firstactive");
-    lineRemove.classList.toggle("remove");
-    lineSecondOne.classList.toggle("secondactive");
+    lineFirstOne.classList.toggle("open");
+    lineRemove.classList.toggle("close");
+    lineSecondOne.classList.toggle("open");
     body.classList.toggle("overflow");
   }
 

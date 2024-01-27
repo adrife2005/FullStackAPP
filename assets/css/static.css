@@ -165,21 +165,24 @@ i {
   height: 3px;
   background-color: #fff;
   margin: 6px 0;
-  transition: 0.2s ease-in-out;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 
-.navbar .hamburguer-button .line.firstactive {
-  transform: rotate(45grad) translateY(3px) translateX(4px);
-  width: 35px;
+.navbar .hamburguer-button div:first-child.open {
+  transform: translate3d(0, 9px, 0) rotate(45deg);
+  transition-property: transform;
 }
 
-.navbar .hamburguer-button .line.remove {
-  display: none;
+.navbar .hamburguer-button div:nth-child(2).close {
+  transform: scaleX(0);
+  opacity: 0;
+  transition-property: transform, opacity;
 }
 
-.navbar .hamburguer-button .line.secondactive {
-  transform: rotate(-45grad) translateY(-3px) translateX(4px);
-  width: 35px;
+.navbar .hamburguer-button div:last-child.open {
+  transform: translate3d(0, -9px, 0) rotate(-45deg);
+  transition-property: transform;
 }
 
 .navbar .mobile-menu {
@@ -621,6 +624,10 @@ button {
 
   .container form {
     width: 325px;
+  }
+
+  .output-section h3 {
+    font-size: 24px;
   }
 
   .navbar .mobile-menu.active {
